@@ -1,15 +1,15 @@
 {
-  "_ApplicationLogo-4e4bc210.js": {
-    "file": "assets/ApplicationLogo-4e4bc210.js",
+  "_ApplicationLogo-cb12e2ce.js": {
+    "file": "assets/ApplicationLogo-cb12e2ce.js",
     "imports": [
       "resources/js/app.jsx"
     ]
   },
   "resources/js/Pages/Auth/Login.jsx": {
-    "file": "assets/Login-99af5ea4.js",
+    "file": "assets/Login-b1f41bfd.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-4e4bc210.js"
+      "_ApplicationLogo-cb12e2ce.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Auth/Login.jsx"
@@ -22,23 +22,13 @@
     "css": [
       "assets/Dashboard-100fee25.css"
     ],
-    "file": "assets/Dashboard-28942231.js",
+    "file": "assets/Dashboard-fd90a35c.js",
     "imports": [
       "resources/js/app.jsx",
-      "_ApplicationLogo-4e4bc210.js"
+      "_ApplicationLogo-cb12e2ce.js"
     ],
     "isDynamicEntry": true,
     "src": "resources/js/Pages/Dashboard.jsx"
-  },
-  "resources/js/Pages/Welcome.jsx": {
-    "file": "assets/Welcome-d00d43d4.js",
-    "imports": [
-      "resources/js/Pages/Auth/Login.jsx",
-      "resources/js/app.jsx",
-      "_ApplicationLogo-4e4bc210.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/Pages/Welcome.jsx"
   },
   "resources/js/app.css": {
     "file": "assets/app-5ad97cb7.css",
@@ -50,10 +40,9 @@
     ],
     "dynamicImports": [
       "resources/js/Pages/Auth/Login.jsx",
-      "resources/js/Pages/Dashboard.jsx",
-      "resources/js/Pages/Welcome.jsx"
+      "resources/js/Pages/Dashboard.jsx"
     ],
-    "file": "assets/app-2c39b105.js",
+    "file": "assets/app-e592f5c5.js",
     "isEntry": true,
     "src": "resources/js/app.jsx"
   }
