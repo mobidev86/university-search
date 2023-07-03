@@ -49,10 +49,10 @@ _Now, let run application:_
 1. Launch the Windows Terminal and key in wsl
  ![image](https://github.com/mobidev86/university-search/assets/45712021/8a02789f-ce59-4232-a7d5-3d2995988a84)
 
-2. git clone "https://github.com/mobidev86/university-search.git"
+2. `git clone "https://github.com/mobidev86/university-search.git"`
 3. `cd /university-search`
 4. `git checkout university-search`
-5. `composer intall`
+5. `composer install`
 6. `./vendor/bin/sail up`
 7. Open http://127.0.0.1
 
