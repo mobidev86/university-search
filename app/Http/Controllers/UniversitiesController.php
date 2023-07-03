@@ -45,7 +45,7 @@ class UniversitiesController extends Controller
 			        ],
 			    ]),
 			];
-			$responses = Promise\unwrap($promises);
+			$responses = Promise\Utils::unwrap($promises);
 			$byCountryResponse = json_decode($responses['byCountry']->getBody());
 			$byNameResponse = json_decode($responses['byName']->getBody());
 			$byDomainResponse = json_decode($responses['byDomain']->getBody());
