@@ -12,24 +12,57 @@ This application will search universities by country, name, or domain.
 
 ## Steps to run application ##
 
+## FOR WINDOWS ##
+
+**Prerequisite**
+1.  Install WSL 2: \
+    Open a command window with administrator privileges and run
+    `wsl --install`, after a restart, you will be ready to use WSL.
+2. Enable WSL: \
+    Open a command window with administrator privileges then run
+    `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+3. Enable the Virtual Machine feature: \
+   Virtualization capabilities are still required for WSL 2. Open a command window with administrator privileges then run
+   `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+4. Download the Linux kernel update package: \
+   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+
+Then, restart your computer.
+
+5. Set WSL 2 as your default version
+   `wsl --set-default-version 2`
+6. Install Ubuntu (or Linux distribution of your choice) \
+   I ) Open the Microsoft Store and then search & select Ubuntu. \
+   II ) From the distribution page, select “Get” then select “Install” \
+   III) Click “Launch” when it is ready \
+   IV ) Create your username and password for your Ubuntu
+7. Use `wsl --list --verbose` to verify your installation
+
+_Now, let run application:_ 
+
+1. git clone "https://github.com/mobidev86/university-search.git"
+2. `cd /university-search`
+3. `git checkout university-search`
+4. `composer intall`
+5. `./vendor/bin/sail up`
+6. Open http://127.0.0.1
+
+
+## FOR UBUNTU ##
 Assuming you have docker installed in your system.
 
-1. Git clone "https://github.com/mobidev86/university-search.git"
+1. git clone "https://github.com/mobidev86/university-search.git"
 2. cd /university-search
-3. Run command:
+3. `git checkout university-search`
+4. Run command:
     `docker run --rm `&#92; \
         `-u "$(id -u):$(id -g)" `&#92; \
         `-v $(pwd):/var/www/html `&#92; \
         `-w /var/www/html `&#92; \
         `laravelsail/php82-composer:latest `&#92; \
         `composer install --ignore-platform-reqs ` \
-        `composer require laravel/passport ` \
-        `cp .env.example .env ` \
-        `php artisan key:generate ` \
         `./vendor/bin/sail up`
-
-4. `./vendor/bin/sail artisan passport:install && ./vendor/bin/sail artisan migrate && ./vendor/bin/sail artisan db:seed`
-5. Open http://localhost OR http://127.0.0.1
+6. Open http://127.0.0.1
 
 
 
