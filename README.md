@@ -37,6 +37,13 @@ Then, restart your computer.
    III) Click “Launch” when it is ready \
    IV ) Create your username and password for your Ubuntu
 7. Use `wsl --list --verbose` to verify your installation
+8. Download Docker Desktop Stable 2.3.0.2 or a later release. \
+8.1. In Docker menu, select Settings > General : Make sure WSL 2 is enabled.
+   ![image](https://github.com/mobidev86/university-search/assets/45712021/086fbf9f-8e0e-4766-a512-18a0ecaf9cf8) \
+8.2 Configure WSL Integration. Make sure you turn on for the correct Linux distros.
+![image](https://github.com/mobidev86/university-search/assets/45712021/4a88463d-df15-46b6-b1a3-09554b3064f2)
+
+
 
 _Now, let run application:_ 
 1. Launch the Windows Terminal and key in wsl
