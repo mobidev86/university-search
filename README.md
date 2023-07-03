@@ -38,7 +38,7 @@ Then, restart your computer.
    IV ) Create your username and password for your Ubuntu
 7. Use `wsl --list --verbose` to verify your installation
 
-Now, let run application: \
+_Now, let run application:_ 
 
 1. git clone "https://github.com/mobidev86/university-search.git"
 2. `cd /university-search`
