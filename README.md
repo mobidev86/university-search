@@ -58,24 +58,21 @@ Then, restart your computer.
 
 
 ## FOR UBUNTU ##
-Assuming you have docker installed in your system.
+Assuming you have docker installed in your system. If not, please follow this: \
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
 **Prerequisite**
-Run command: \
-        `docker run --rm `&#92; \
-        `-u "$(id -u):$(id -g)" `&#92; \
-        `-v $(pwd):/var/www/html `&#92; \
-        `-w /var/www/html `&#92; \
-        `laravelsail/php82-composer:latest `&#92; \
+Docker install & running.
 
 **_Now, let run application:_ **
+
+Peform below commands:
 
 1. `git clone "https://github.com/mobidev86/university-search.git"`
 2. `cd /university-search`
 3. `git checkout university-search`
-4. Run command:
-        `composer install --ignore-platform-reqs ` \
-        `./vendor/bin/sail up`
+4. `composer install`
+5. `./vendor/bin/sail up`               
 6. Open http://127.0.0.1
 
 
