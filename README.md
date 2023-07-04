@@ -1,66 +1,99 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## University Search ##
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This application will search universities by country, name, or domain.
 
-## About Laravel
+## Technology Stack ##
+1. Laravel 10
+2. React v18
+3. Laravel Sail
+4. Tailwind CSS
+5. Larastan
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Steps to run application ##
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## FOR WINDOWS ##
 
-## Learning Laravel
+**Prerequisite**
+1.  Install WSL 2: \
+    Open a command window with administrator privileges and run
+    `wsl --install`, after a restart, you will be ready to use WSL.
+2. Enable WSL: \
+    Open a command window with administrator privileges then run
+    `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
+3. Enable the Virtual Machine feature: \
+   Virtualization capabilities are still required for WSL 2. Open a command window with administrator privileges then run
+   `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
+4. Download the Linux kernel update package: \
+   https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Then, restart your computer.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Set WSL 2 as your default version
+   `wsl --set-default-version 2`
+6. Install Ubuntu (or Linux distribution of your choice) \
+   I ) Open the Microsoft Store and then search & select Ubuntu. \
+   II ) From the distribution page, select “Get” then select “Install” \
+   III) Click “Launch” when it is ready \
+   IV ) Create your username and password for your Ubuntu
+7. Use `wsl --list --verbose` to verify your installation
+8. Download Docker Desktop Stable 2.3.0.2 or a later release. \
+8.1. In Docker menu, select Settings > General : Make sure WSL 2 is enabled.
+   ![image](https://github.com/mobidev86/university-search/assets/45712021/086fbf9f-8e0e-4766-a512-18a0ecaf9cf8) \
+8.2 Configure WSL Integration. Make sure you turn on for the correct Linux distros.
+![image](https://github.com/mobidev86/university-search/assets/45712021/4a88463d-df15-46b6-b1a3-09554b3064f2)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**_Now, let run application:_ **
+1. Launch the Windows Terminal and key in wsl
+ ![image](https://github.com/mobidev86/university-search/assets/45712021/8a02789f-ce59-4232-a7d5-3d2995988a84)
 
-### Premium Partners
+2. `git clone "https://github.com/mobidev86/university-search.git"`
+3. `cd /university-search`
+4. `git checkout university-search`
+5. `composer install`
+6. `./vendor/bin/sail up`
+7. Open http://127.0.0.1
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## FOR UBUNTU ##
+Assuming you have docker installed in your system. If not, please follow this: \
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Prerequisite**
+Docker install & running.
 
-## Code of Conduct
+**_Now, let run application:_ **
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Peform below commands:
 
-## Security Vulnerabilities
+1. `git clone "https://github.com/mobidev86/university-search.git"`
+2. `cd /university-search`
+3. `git checkout university-search`
+4. `composer install`
+5. `./vendor/bin/sail up`               
+6. Open http://127.0.0.1
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Cache ##
+We have used Redis(Laravel default) cache on server side and on client side we are using UseMemo Hook.
+
+
+## Example credentials ##
+Username: test@example.app
+Password: password123
+
+
+## Additional Comments ##
+We have used larastan plugin to maintain quality of code. reference link : https://packagist.org/packages/nunomaduro/larastan
+
+
+## Screenshots ##
+<a href="https://prnt.sc/mN_eQucaxtsQ" target="_blank">Screen 1 </a>
+<a href="https://prnt.sc/XERoAMN0XogD" target="_blank">Screen 2 </a>
+
+## Video Demo ##
+<a href="https://screenrec.com/share/5tjni1FRcr" target="_blank">Click here to see</a>
