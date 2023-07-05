@@ -75,8 +75,28 @@ Peform below commands:
 5. `./vendor/bin/sail up`               
 6. Open http://127.0.0.1
 
+## FOR MAC OS ##
+Assuming you have docker installed in your system. If not, please follow this: \
+https://docs.docker.com/desktop/install/mac-install/
 
+**Prerequisite**
+Docker install & running.
 
+**_Now, let run application:_ **
+
+Peform below commands:
+
+1. `git clone "https://github.com/mobidev86/university-search.git"`
+2. `cd /university-search`
+3. `git checkout university-search`
+4. `composer install`
+5. `./vendor/bin/sail up`               
+6. Open http://127.0.0.1
+
+## NOTE ##
+If you face any error, like connection refused, please follow below steps:
+1. `Ctrl + C`
+2. `./vendor/bin/sail up`
 
 ## Cache ##
 We have used Redis(Laravel default) cache on server side and on client side we are using UseMemo Hook.
